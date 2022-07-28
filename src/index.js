@@ -28,7 +28,7 @@ function App(){
         <h1> {new Date().toLocaleTimeString()}</h1>
         <h1> {message}</h1>
 
-        {/* example of props */}
+        
         <input type="number" min={5} list={[1,2,3]} style={{color:'red'}} alt={message}></input>
     </div>
     
