@@ -18,17 +18,25 @@ const root = ReactDOM.createRoot(el);
 //4. create a component: function that returns jxs.
 function App(){
     let message = 'Bye there';
+    // const date = new Date();
+    // const time = date.toLocaleTimeString();
     if(Math.random()>0.5){
         message="Hello there";
     }
-    return <h1> {message}</h1>;
+    return (
+    <div>
+        <h1> {new Date().toLocaleTimeString()}</h1>
+        <h1> {message}</h1>
+
+        {/* example of props */}
+        <input type="number" min={5} list={[1,2,3]} style={{color:'red'}} alt={message}></input>
+    </div>
+    
+    
+    );
+    //We uses curly barces to show strings and numbers/expressions
 }
 
 //5. show the component on the screen.
 root.render(<App />);
-
-//Note: JSX is pass to the Babel which converts it into equivalent javascript.
-//writing jsx doesnt make anything show up in browser automatically
-//This creates instruction for react telling it to make an element
-//we have to return it from a component for react to use it.
 
